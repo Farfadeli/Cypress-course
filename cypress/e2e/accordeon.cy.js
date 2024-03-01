@@ -19,8 +19,12 @@ context('Cypher', () => { beforeEach(() => {
     it("Test have rotate" , () => {
         cy.get(".first-element").click()
         cy.get(".svg-1").should("have.class", "rotate-90")
+        cy.get(".first-element").click()
+        cy.get(".svg-1").should("not.have.class", "rotate-90")
         cy.get(".second-element").click()
         cy.get(".svg-2").should("have.class", "rotate-90")
+        cy.get(".second-element").click()
+        cy.get(".svg-2").should("not.have.class", "rotate-90")
     })
 
 })
