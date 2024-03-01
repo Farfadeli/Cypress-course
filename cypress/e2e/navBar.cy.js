@@ -4,7 +4,7 @@ context('nav_bar', () => { beforeEach(() => {
     it('scroll down', () => {
         cy.scrollTo("bottom", {duration : 500})
         cy.get("nav").should("not.be.visible")
-        cy.scrollTo(0, -50, {duration: 500});
+        cy.scrollTo(0, 200, {duration: 500});
         cy.get("nav").should("be.visible")
     })
 })
